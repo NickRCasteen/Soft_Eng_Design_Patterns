@@ -16,7 +16,7 @@ class Context:
 class State(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def handle(self):
-        print("handling the pure state")
+        print("This should not get printed as long as a specific state exists")
 
 
 #What the function does when in state A
@@ -31,7 +31,7 @@ class ConcreteStateB(State):
         print("Behavior of state B")
 
 
-#Here, the out put of changingFunction.doYourThing can change, based
+#Here, the output of changingFunction.doYourThing can change, based
 #on the current state of the program. 
 def main():
     concrete_state_a = ConcreteStateA()
